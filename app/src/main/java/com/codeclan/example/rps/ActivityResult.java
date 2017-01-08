@@ -35,10 +35,7 @@ public class ActivityResult extends AppCompatActivity {
 
         String result = game.getResult();
 
-
-
         mResultText.setText(result);
-
 
         mReturnButton = (Button) findViewById(R.id.return_button);
         mReturnButton.setOnClickListener(new View.OnClickListener() {

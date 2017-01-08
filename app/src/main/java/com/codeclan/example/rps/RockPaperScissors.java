@@ -1,11 +1,5 @@
 package com.codeclan.example.rps;
 
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
@@ -35,7 +29,7 @@ public class RockPaperScissors {
         moves.put("Rock", "Scissors");
     }
 
-    public String computerMove() {
+    public void computerMove() {
         Random rand = new Random();
         ArrayList<String> movesArray = new ArrayList<>();
         for(String key : moves.keySet()) {
@@ -43,23 +37,21 @@ public class RockPaperScissors {
         }
         int randomIndex = rand.nextInt(3);
         String randomAnswer = movesArray.get(randomIndex);
-        return randomAnswer;
+        this.mComputerMove = randomAnswer;
     }
 
     public boolean win() {
-        return (moves.get(mPlayerMove) == computerMove());
+        return (moves.get(mPlayerMove).equals(mComputerMove));
     }
 
-    public boolean draw(){
-        return (mPlayerMove == computerMove());
-    }
     public boolean lose(){
-        return (moves.get(computerMove()) == (mPlayerMove));
+        return (moves.get(mComputerMove).equals(mPlayerMove));
     }
 
     public String getResult(){
+        computerMove();
         String outcome = null;
-        if( win()){
+        if(win()){
             outcome = "You win!";
         }
         else if(lose()){
@@ -70,9 +62,5 @@ public class RockPaperScissors {
         }
         return outcome;
     }
-
-
-
-
 
 }
