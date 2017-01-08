@@ -8,6 +8,7 @@
     <string name="back">Return</string>
     <string name="activity_play_title">Pick</string>
     <string name="activity_result_title">Result</string>
+    <string name="welcome">Welcome to Rock Paper Scissors: Press Play to continue:</string>
 
 </resources>
 

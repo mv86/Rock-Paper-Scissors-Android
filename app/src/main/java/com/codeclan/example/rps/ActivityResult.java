@@ -37,12 +37,6 @@ public class ActivityResult extends AppCompatActivity {
 
 
 
-
-
-
-//        String result = "Bobby played Rock, Computer played Scissors:  Bobby Wins!!!";
-
-
         mResultText.setText(result);
 
 

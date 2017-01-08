@@ -11,15 +11,13 @@ public class WelcomeActivity extends AppCompatActivity
 {
 
     Button mPlayButton;
-    //puts button on screen
 
     @Override
-    //WHY OVERIDE ONCREATE? WHAT IS IT ORIGINALLY?
     protected void onCreate(Bundle savedInstanceState)
     {
 
         Log.d("RPS", "onCreate called");
-    //CALLS THE ON CREATE OF THE SUPERCLASS
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
@@ -35,7 +33,6 @@ public class WelcomeActivity extends AppCompatActivity
                 Intent intent = new Intent(WelcomeActivity.this, ActivityPlay.class);
 
                 startActivity(intent);
-
             }
         });
 

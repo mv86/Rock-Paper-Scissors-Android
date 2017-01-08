@@ -16,15 +16,15 @@ import java.util.Random;
 
 public class RockPaperScissors {
 
-    //    EditText mPlayerName;
     HashMap<String, String> moves = new HashMap<>();
     String mPlayerMove;
+    String mComputerMove;
 
 
 
     public RockPaperScissors(String move) {
         this.mPlayerMove = move;
-        //remember to call the setUpMoves
+        this.mComputerMove = null;
         setUpMoves();
     }
 
